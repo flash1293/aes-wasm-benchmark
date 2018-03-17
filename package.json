@@ -1,0 +1,18 @@
+{
+  "name": "tiny-aes-wasm-benchmark",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "neutrino build",
+    "start": "neutrino start"
+  },
+  "devDependencies": {
+    "@neutrinojs/web": "^8.1.2",
+    "neutrino": "^8.1.2"
+  },
+  "dependencies": {
+    "aes-js": "^3.1.0",
+    "tiny-aes-wasm": "file:../tiny-aes-wasm/build"
+  }
+}
