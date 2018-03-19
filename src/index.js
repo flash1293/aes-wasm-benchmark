@@ -21,7 +21,7 @@ function fillPlainBuffer(size) {
     for (let i = 0; i < size; i++) {
       buf.push(Math.floor(Math.random() * 256));
     }
-    plainBuffer = buf;
+    plainBuffer = new Uint8Array(buf);
   }
 }
 
