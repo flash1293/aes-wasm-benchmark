@@ -12,7 +12,7 @@
     "neutrino": "^8.1.2"
   },
   "dependencies": {
-    "aes-js": "^3.1.0",
+    "sjcl": "^1.0.7",
     "tiny-aes-wasm": "file:../tiny-aes-wasm/build"
   }
 }
