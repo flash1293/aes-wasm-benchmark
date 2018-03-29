@@ -1,4 +1,4 @@
-import { aes256 } from 'tiny-aes-wasm';
+import { aes256 } from 'aes-wasm';
 import sjcl from 'sjcl';
 
 sjcl.codec.bytes = {

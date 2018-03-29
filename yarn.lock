@@ -217,9 +217,9 @@ acorn@^4.0.3:
   version "4.0.13"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.13.tgz#105495ae5361d697bd195c825192e1ad7f253787"
 
-aes-js@^3.1.0:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/aes-js/-/aes-js-3.1.0.tgz#f5f7588494526997cc635cc334c8bb8e967a5d82"
+aes-wasm@^1.0.0:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/aes-wasm/-/aes-wasm-1.0.2.tgz#0e8ca640d2622f9aa3dbec1cd37116fbfcff6a87"
 
 ajv-keywords@^3.1.0:
   version "3.1.0"
@@ -6815,9 +6815,6 @@ timers-browserify@^2.0.4:
   resolved "https://registry.yarnpkg.com/timers-browserify/-/timers-browserify-2.0.6.tgz#241e76927d9ca05f4d959819022f5b3664b64bae"
   dependencies:
     setimmediate "^1.0.4"
-
-"tiny-aes-wasm@file:../tiny-aes-wasm/build":
-  version "1.0.0"
 
 to-absolute-glob@^0.1.1:
   version "0.1.1"

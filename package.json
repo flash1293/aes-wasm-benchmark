@@ -1,7 +1,8 @@
 {
-  "name": "tiny-aes-wasm-benchmark",
+  "name": "aes-wasm-benchmark",
   "version": "1.0.0",
   "main": "index.js",
+  "private": true,
   "license": "MIT",
   "scripts": {
     "build": "neutrino build",
@@ -13,6 +14,6 @@
   },
   "dependencies": {
     "sjcl": "^1.0.7",
-    "tiny-aes-wasm": "file:../tiny-aes-wasm/build"
+    "aes-wasm": "^1.0.0"
   }
 }
