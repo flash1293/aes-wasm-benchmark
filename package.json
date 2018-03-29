@@ -5,7 +5,9 @@
   "private": true,
   "license": "MIT",
   "scripts": {
+    "prebuild": "rm *.js && rm *.html",
     "build": "neutrino build",
+    "postbuild": "mv build/* .",
     "start": "neutrino start"
   },
   "devDependencies": {

@@ -151,7 +151,7 @@ function fillPlainBuffer(size) {
 }
 
 const root = document.getElementById('root');
-root.innerHTML = '<h1>tiny-aem-wasm Benchmark</h1><button id="start">Run Benchmark</button><table id="results"><tr><th>label</th><th>mean time (ms/run)</th></tr></table>';
+root.innerHTML = '<h1>aem-wasm Benchmark</h1><button id="start">Run Benchmark</button><table id="results"><tr><th>label</th><th>mean time (ms/run)</th></tr></table>';
 
 let plainBuffer;
 let plainBitArrayBuffer;
@@ -167,25 +167,25 @@ document.getElementById('start').addEventListener('click', () => {
     const sjclInstance = new sjcl.cipher.aes(wordKeyBuffer);
     aesWasmInstance.init(keyBuffer, ivBuffer);
 
-    benchmark('tiny-aes-wasm 4MB', fillPlainBuffer(2**22), () => {
+    benchmark('aes-wasm 4MB', fillPlainBuffer(2**22), () => {
       aesWasmInstance.encrypt(plainBuffer);
     }, 1);
     benchmark('sjcl 4MB', fillPlainBuffer(2**22), () => {
       sjcl.mode.cbc.encrypt(sjclInstance, plainBitArrayBuffer, bitArrayIvBuffer);
     }, 1);
-    benchmark('tiny-aes-wasm 1MB', fillPlainBuffer(2**20), () => {
+    benchmark('aes-wasm 1MB', fillPlainBuffer(2**20), () => {
       aesWasmInstance.encrypt(plainBuffer);
     }, 10);
     benchmark('sjcl 1MB', fillPlainBuffer(2**20), () => {
       sjcl.mode.cbc.encrypt(sjclInstance, plainBitArrayBuffer, bitArrayIvBuffer);
     }, 10);
-    benchmark('tiny-aes-wasm 1KB', fillPlainBuffer(2**10), () => {
+    benchmark('aes-wasm 1KB', fillPlainBuffer(2**10), () => {
       aesWasmInstance.encrypt(plainBuffer);
     }, 5000);
     benchmark('sjcl 1KB', fillPlainBuffer(2**10), () => {
       sjcl.mode.cbc.encrypt(sjclInstance, plainBitArrayBuffer, bitArrayIvBuffer);
     }, 5000);
-    benchmark('tiny-aes-wasm 64 byte', fillPlainBuffer(2**6), () => {
+    benchmark('aes-wasm 64 byte', fillPlainBuffer(2**6), () => {
       aesWasmInstance.encrypt(plainBuffer);
     }, 10000);
     benchmark('sjcl 64 byte', fillPlainBuffer(2**6), () => {

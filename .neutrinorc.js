@@ -4,7 +4,7 @@ module.exports = {
       '@neutrinojs/web',
       {
         html: {
-          title: 'tiny-aes-wasm-benchmark'
+          title: 'aes-wasm-benchmark'
         }
       }
     ]
